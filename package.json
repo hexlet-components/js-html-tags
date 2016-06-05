@@ -1,0 +1,40 @@
+{
+  "name": "hexlet-dom",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register",
+    "gulp": "gulp",
+    "eslint": "eslint",
+    "build": "babel index.js --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexlet-components/js-dom.git"
+  },
+  "author": "Kirill Mokevnin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hexlet-components/js-dom/issues"
+  },
+  "homepage": "https://github.com/hexlet-components/js-dom#readme",
+  "dependencies": {
+    "hexlet-pairs-data": "*"
+  },
+  "devDependencies": {
+    "babel-eslint": "*",
+    "babel-cli": "^6.9.0",
+    "babel-core": "*",
+    "babel-preset-es2015": "*",
+    "babel-plugin-syntax-flow": "*",
+    "babel-plugin-transform-flow-strip-types": "*",
+    "babel-plugin-typecheck": "*",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-import": "^1.8.0",
+    "gulp": "*",
+    "mocha": "*"
+  }
+}
