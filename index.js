@@ -22,7 +22,7 @@ export const toString = (elements) => {
   const element = data.head(elements);
   const tag = name(element);
   const body = hasChildren(element) ? toString(data.reverse(children(element))) : value(element);
-  return `<${tag}>${body}</${tag}>${toString(data.tail(elements))}`;
+  return `${toString(data.tail(elements))}<${tag}>${body}</${tag}>`;
 };
 
 export const map = (func, elements) => data.map(func, elements);

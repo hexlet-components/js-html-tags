@@ -24,14 +24,16 @@ describe('dom', () => {
   });
 
   it('#toString', () => {
+    const p = node('p', 'paragraph');
     const ul = node('ul');
     const ul2 = addChild(ul, node('li', 'body'));
     const ul3 = addChild(ul2, node('li', 'another body'));
     const dom1 = make();
-    const dom2 = append(dom1, ul3);
+    const dom2 = append(dom1, p);
+    const dom3 = append(dom2, ul3);
 
-    const result = '<ul><li>body</li><li>another body</li></ul>';
-    assert.equal(toString(dom2), result);
+    const result = '<p>paragraph</p><ul><li>another body</li><li>body</li></ul>';
+    assert.equal(toString(dom3), result);
   });
 
   it('#map', () => {
@@ -42,14 +44,14 @@ describe('dom', () => {
       return element;
     }, dom);
 
-    const result = '<h3>header2</h3><ul><li>body</li><li>another body</li></ul><h3>hello, world</h3>';
+    const result = '<h3>hello, world</h3><ul><li>another body</li><li>body</li></ul><h3>header2</h3>';
     assert.equal(toString(processedDom), result);
   });
 
   it('#filter', () => {
     const processedDom = filter((element) => is('h2', element), dom);
 
-    const result = '<h2>header2</h2><h2>hello, world</h2>';
+    const result = '<h2>hello, world</h2><h2>header2</h2>';
     assert.equal(toString(processedDom), result);
   });
 });
