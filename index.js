@@ -1,25 +1,29 @@
-import * as elementsModule from './src/elements';
-import { isPair, car, cdr } from 'hexlet-pairs';
-import { l, isEmpty, head, tail, cons, reverse } from 'hexlet-pairs-data';
+import { isPair, car, cdr, cons } from 'hexlet-pairs';
+import * as data from 'hexlet-pairs-data';
 
-export const make = () => l();
-export const append = (dom, element) => cons(element, dom);
+export const make = () => data.l();
+export const append = (dom, element) => data.cons(element, dom);
+
+export const node = (tag, mix = data.l()) => cons(tag, mix);
 
 export const name = (element) => car(element);
 export const value = (element) => cdr(element);
+export const is = (tag, element) => tag === name(element);
 
 export const hasChildren = (element) => isPair(cdr(element));
 export const children = (element) => cdr(element);
-export const addChild = (element, child) => cons(name(element), cons(child, children(element)));
+export const addChild = (element, child) =>
+  data.cons(name(element), data.cons(child, children(element)));
 
 export const toString = (elements) => {
-  if (isEmpty(elements)) {
+  if (data.isEmpty(elements)) {
     return '';
   }
-  const element = head(elements);
+  const element = data.head(elements);
   const tag = name(element);
-  const body = hasChildren(element) ? toString(reverse(children(element))) : value(element);
-  return `<${tag}>${body}</${tag}>${toString(tail(elements))}`;
+  const body = hasChildren(element) ? toString(data.reverse(children(element))) : value(element);
+  return `<${tag}>${body}</${tag}>${toString(data.tail(elements))}`;
 };
 
-export const elements = elementsModule;
+export const map = (func, elements) => data.map(func, elements);
+export const filter = (func, elements) => data.filter(func, elements);

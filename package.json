@@ -1,5 +1,5 @@
 {
-  "name": "hexlet-dom",
+  "name": "hexlet-html-tags",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hexlet-components/js-dom.git"
+    "url": "git+https://github.com/hexlet-components/js-html-tags.git"
   },
   "author": "Kirill Mokevnin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hexlet-components/js-dom/issues"
+    "url": "https://github.com/hexlet-components/js-html-tags/issues"
   },
-  "homepage": "https://github.com/hexlet-components/js-dom#readme",
+  "homepage": "https://github.com/hexlet-components/js-html-tags#readme",
   "dependencies": {
     "hexlet-pairs-data": "*"
   },
