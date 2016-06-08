@@ -21,7 +21,7 @@ export const toString = (elements) => {
   }
   const element = data.head(elements);
   const tag = name(element);
-  const body = hasChildren(element) ? toString(data.reverse(children(element))) : value(element);
+  const body = hasChildren(element) ? toString(children(element)) : value(element);
   return `${toString(data.tail(elements))}<${tag}>${body}</${tag}>`;
 };
 

@@ -32,7 +32,7 @@ describe('dom', () => {
     const dom2 = append(dom1, p);
     const dom3 = append(dom2, ul3);
 
-    const result = '<p>paragraph</p><ul><li>another body</li><li>body</li></ul>';
+    const result = '<p>paragraph</p><ul><li>body</li><li>another body</li></ul>';
     assert.equal(toString(dom3), result);
   });
 
@@ -44,7 +44,7 @@ describe('dom', () => {
       return element;
     }, dom);
 
-    const result = '<h3>hello, world</h3><ul><li>another body</li><li>body</li></ul><h3>header2</h3>';
+    const result = '<h3>hello, world</h3><ul><li>body</li><li>another body</li></ul><h3>header2</h3>';
     assert.equal(toString(processedDom), result);
   });
 
