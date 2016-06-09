@@ -27,3 +27,4 @@ export const toString = (elements) => {
 
 export const map = (func, elements) => data.map(func, elements);
 export const filter = (func, elements) => data.filter(func, elements);
+export const reduce = (func, init, elements) => data.reduce(func, init, elements);

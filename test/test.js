@@ -1,6 +1,7 @@
 import assert from 'assert';
 import { make,
   append,
+  reduce,
   addChild,
   toString,
   filter,
@@ -53,5 +54,11 @@ describe('dom', () => {
 
     const result = '<h2>hello, world</h2><h2>header2</h2>';
     assert.equal(toString(processedDom), result);
+  });
+
+  it('#reduce', () => {
+    const count = reduce((element, acc) => acc + 1, 0, dom);
+
+    assert.equal(count, 3);
   });
 });
