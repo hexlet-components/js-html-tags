@@ -8,7 +8,7 @@ import { make,
   map,
   is,
   value,
-  node } from '../index.js';
+  node } from '../src/index.js';
 
 describe('dom', () => {
   let dom;

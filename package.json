@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "documentation": "documentation",
     "test": "mocha --compilers js:babel-core/register",
     "gulp": "gulp",
     "eslint": "eslint",
@@ -24,6 +25,7 @@
     "hexlet-pairs-data": "*"
   },
   "devDependencies": {
+    "documentation": "v4.0.0-beta11",
     "babel-eslint": "*",
     "babel-cli": "^6.9.0",
     "babel-core": "*",
