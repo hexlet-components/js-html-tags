@@ -6,86 +6,198 @@
 
 # make
 
-Make
+Make a list of nodes
+
+**Examples**
+
+```javascript
+make(node('span', 'hello'), node('span', 'world'));
+```
 
 # append
 
-Append
+Append node to a list of nodes
 
 **Parameters**
 
 -   `dom`  
 -   `element`  
 
+**Examples**
+
+```javascript
+const dom = make();
+append(dom, node('h2', 'hello, world'));
+```
+
 # node
+
+Make a node
 
 **Parameters**
 
 -   `tag`  
 -   `mix`   (optional, default `data.l()`)
 
+**Examples**
+
+```javascript
+node('h2', 'hello, world');
+node('div', l(node('p', 'one'), node('p', 'two')));
+```
+
 # name
+
+Get node's name
 
 **Parameters**
 
 -   `element`  
+
+**Examples**
+
+```javascript
+name(node('p', 'hello, world')); // p
+```
 
 # value
 
+Get node's value
+
 **Parameters**
 
 -   `element`  
+
+**Examples**
+
+```javascript
+value(node('p', 'hello, world')); // hello, world
+```
 
 # is
 
+Check if node is tag
+
 **Parameters**
 
--   `tag`  
+-   `tagName` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `element`  
+
+**Examples**
+
+```javascript
+is('h3', ('h3', 'hexlet')); // true
+is('h3', ('h6', 'hexlet')); // false
+```
 
 # hasChildren
 
+Check if node has children
+
 **Parameters**
 
 -   `element`  
+
+**Examples**
+
+```javascript
+has(node('h3', 'hexlet')); // false
+has(node('div', l(node('p', 'wow')))); // true
+```
 
 # children
 
+Get node's children
+
 **Parameters**
 
 -   `element`  
 
+**Examples**
+
+```javascript
+const children = l(node('p', 'wow'), node('p', 'hey');
+children(node('div', children)); // [('p', 'wow'), ('p', 'hey')]
+```
+
 # addChild
+
+Add child to node
 
 **Parameters**
 
 -   `element`  
 -   `child`  
 
+**Examples**
+
+```javascript
+const node = node('div');
+addChild(node, node('p', 'html tags'));
+```
+
 # toString
+
+Convert list of nodes to string
 
 **Parameters**
 
 -   `elements`  
+
+**Examples**
+
+```javascript
+const tags = make(node('p', 'text'), node('p', 'text2'));
+toString(tags); // <p>text</p><p>text2</p>
+```
 
 # map
 
+Map a list of nodes
+
 **Parameters**
 
 -   `func`  
 -   `elements`  
+
+**Examples**
+
+```javascript
+map(element => {
+  if (is('h2', element)) {
+    return node('h3', value(element));
+  }
+  return element;
+}, dom);
+```
 
 # filter
 
+Filter a list of nodes
+
 **Parameters**
 
 -   `func`  
 -   `elements`  
 
+**Examples**
+
+```javascript
+filter(element => is('h2', element), dom);
+```
+
 # reduce
+
+Reduce a list of nodes
 
 **Parameters**
 
 -   `func`  
 -   `init`  
 -   `elements`  
+
+**Examples**
+
+```javascript
+reduce((element, acc) => acc + 1, 0, dom);
+```
