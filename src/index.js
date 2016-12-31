@@ -44,8 +44,8 @@ export const value = (element) => cdr(element);
 /**
  * Check if node is tag
  * @example
- * is('h3', ('h3', 'hexlet')); // true
- * is('h3', ('h6', 'hexlet')); // false
+ * is('h3', node('h3', 'hexlet')); // true
+ * is('h3', node('h6', 'hexlet')); // false
  */
 export const is = (tagName: string, element) => tagName === name(element);
 
