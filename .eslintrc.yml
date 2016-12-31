@@ -4,3 +4,7 @@ parser: 'babel-eslint'
 env:
   node: true
   mocha: true
+
+parserOptions:
+  ecmaVersion: 2017
+  sourceType: module

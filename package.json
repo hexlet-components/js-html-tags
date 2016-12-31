@@ -22,20 +22,21 @@
   },
   "homepage": "https://github.com/hexlet-components/js-html-tags#readme",
   "dependencies": {
+    "hexlet-pairs": "*",
     "hexlet-pairs-data": "*"
   },
   "devDependencies": {
-    "documentation": "v4.0.0-beta11",
-    "babel-eslint": "*",
     "babel-cli": "^6.9.0",
     "babel-core": "*",
-    "babel-preset-es2015": "*",
+    "babel-eslint": "*",
     "babel-plugin-syntax-flow": "*",
     "babel-plugin-transform-flow-strip-types": "*",
     "babel-plugin-typecheck": "*",
+    "babel-preset-env": "*",
+    "documentation": "v4.0.0-beta11",
     "eslint": "*",
     "eslint-config-airbnb": "*",
-    "eslint-plugin-import": "^1.8.0",
+    "eslint-plugin-import": "*",
     "gulp": "*",
     "mocha": "*"
   }
