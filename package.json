@@ -5,10 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "documentation": "documentation",
-    "test": "mocha --compilers js:babel-core/register",
+    "test": "jest --colors",
     "gulp": "gulp",
     "eslint": "eslint",
-    "build": "babel src/index.js --out-dir dist",
+    "build": "babel src/index.js --out-dir dist --source-maps",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -26,18 +26,16 @@
     "hexlet-pairs-data": "*"
   },
   "devDependencies": {
-    "babel-cli": "^6.9.0",
+    "babel-cli": "*",
     "babel-core": "*",
     "babel-eslint": "*",
-    "babel-plugin-syntax-flow": "*",
-    "babel-plugin-transform-flow-strip-types": "*",
-    "babel-plugin-typecheck": "*",
     "babel-preset-env": "*",
-    "documentation": "v4.0.0-beta11",
+    "babel-preset-flow": "*",
+    "babel-preset-stage-0": "*",
+    "documentation": "^v4.0.0-beta11",
     "eslint": "*",
     "eslint-config-airbnb": "*",
-    "eslint-plugin-import": "*",
     "gulp": "*",
-    "mocha": "*"
+    "jest": "*"
   }
 }

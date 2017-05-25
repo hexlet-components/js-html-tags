@@ -1,4 +1,3 @@
-import assert from 'assert';
 import { make,
   append,
   reduce,
@@ -13,7 +12,7 @@ import { make,
 describe('dom', () => {
   let dom;
 
-  before(() => {
+  beforeAll(() => {
     const dom1 = make();
     const dom2 = append(dom1, node('h2', 'hello, world'));
     const ul = node('ul');
@@ -34,7 +33,7 @@ describe('dom', () => {
     const dom3 = append(dom2, ul3);
 
     const result = '<p>paragraph</p><ul><li>body</li><li>another body</li></ul>';
-    assert.equal(toString(dom3), result);
+    expect(toString(dom3)).toBe(result);
   });
 
   it('#map', () => {
@@ -46,19 +45,19 @@ describe('dom', () => {
     }, dom);
 
     const result = '<h3>hello, world</h3><ul><li>body</li><li>another body</li></ul><h3>header2</h3>';
-    assert.equal(toString(processedDom), result);
+    expect(toString(processedDom)).toBe(result);
   });
 
   it('#filter', () => {
     const processedDom = filter(element => is('h2', element), dom);
 
     const result = '<h2>hello, world</h2><h2>header2</h2>';
-    assert.equal(toString(processedDom), result);
+    expect(toString(processedDom)).toBe(result);
   });
 
   it('#reduce', () => {
     const count = reduce((element, acc) => acc + 1, 0, dom);
 
-    assert.equal(count, 3);
+    expect(count).toBe(3);
   });
 });
