@@ -52,8 +52,8 @@ export const is = (tagName: string, element) => tagName === name(element);
 /**
  * Check if node has children
  * @example
- * has(node('h3', 'hexlet')); // false
- * has(node('div', l(node('p', 'wow')))); // true
+ * hasChildren(node('h3', 'hexlet')); // false
+ * hasChildren(node('div', l(node('p', 'wow')))); // true
  */
 export const hasChildren = element => isPair(cdr(element));
 
