@@ -22,16 +22,18 @@
   },
   "homepage": "https://github.com/hexlet-components/js-html-tags#readme",
   "dependencies": {
-    "hexlet-pairs": "*",
-    "hexlet-pairs-data": "*"
-  },
-  "devDependencies": {
-    "babel-cli": "*",
-    "babel-core": "*",
-    "babel-eslint": "*",
     "babel-preset-env": "*",
     "babel-preset-flow": "*",
     "babel-preset-stage-0": "*",
+    "hexlet-pairs": "*",
+    "hexlet-pairs-data": "*",
+    "source-map-support": "*"
+  },
+  "devDependencies": {
+    "eslint-plugin-import": "*",
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "*",
     "documentation": "^v4.0.0-beta11",
     "eslint": "*",
     "eslint-config-airbnb": "*",

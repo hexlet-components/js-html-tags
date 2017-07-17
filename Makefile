@@ -12,6 +12,6 @@ test:
 	npm run test
 
 lint:
-	npm run eslint -- src test
+	npm run eslint -- .
 
 .PHONY: test docs
