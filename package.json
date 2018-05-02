@@ -8,7 +8,7 @@
     "test": "jest --colors",
     "gulp": "gulp",
     "eslint": "eslint",
-    "build": "babel src/index.js --out-dir dist --source-maps",
+    "build": "babel src/index.js --out-dir dist --source-maps inline",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -26,18 +26,20 @@
     "babel-preset-flow": "*",
     "babel-preset-stage-0": "*",
     "hexlet-pairs": "*",
-    "hexlet-pairs-data": "*",
-    "source-map-support": "*"
+    "hexlet-pairs-data": "*"
   },
   "devDependencies": {
-    "eslint-plugin-import": "*",
     "babel-cli": "*",
     "babel-core": "*",
     "babel-eslint": "*",
-    "documentation": "^v4.0.0-beta11",
+    "babel-jest": "^22.4.3",
+    "documentation": "^4.0.0",
     "eslint": "*",
     "eslint-config-airbnb": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jest": "^21.15.1",
     "gulp": "*",
-    "jest": "*"
+    "jest": "*",
+    "jest-cli": "^22.4.3"
   }
 }

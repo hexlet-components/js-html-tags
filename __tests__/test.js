@@ -1,4 +1,5 @@
-import { make,
+import {
+  make,
   append,
   reduce,
   addChild,
@@ -7,7 +8,8 @@ import { make,
   map,
   is,
   value,
-  node } from '..';
+  node,
+} from '../src';
 
 describe('dom', () => {
   let dom;

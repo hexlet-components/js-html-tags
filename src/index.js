@@ -1,7 +1,5 @@
 // @flow
 
-import 'source-map-support/register';
-
 import { isPair, car, cdr, cons } from 'hexlet-pairs';
 import * as data from 'hexlet-pairs-data';
 
