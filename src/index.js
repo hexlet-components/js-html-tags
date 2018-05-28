@@ -60,7 +60,7 @@ export const hasChildren = element => isPair(cdr(element));
 /**
  * Get node's children
  * @example
- * const children = l(node('p', 'wow'), node('p', 'hey');
+ * const children = l(node('p', 'wow'), node('p', 'hey'));
  * children(node('div', children)); // [('p', 'wow'), ('p', 'hey')]
  */
 export const children = element => cdr(element);
