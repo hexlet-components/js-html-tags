@@ -7,7 +7,7 @@ import {
   filter,
   map,
   is,
-  value,
+  getValue,
   node,
 } from '../src';
 
@@ -41,7 +41,7 @@ describe('dom', () => {
   it('#map', () => {
     const processedDom = map((element) => {
       if (is('h2', element)) {
-        return node('h3', value(element));
+        return node('h3', getValue(element));
       }
       return element;
     }, dom);
