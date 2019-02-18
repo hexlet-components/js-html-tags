@@ -6,8 +6,6 @@
   "scripts": {
     "documentation": "documentation",
     "test": "jest --colors",
-    "gulp": "gulp",
-    "eslint": "eslint",
     "build": "babel src --out-dir dist --source-maps inline",
     "prepublish": "npm run build"
   },
@@ -22,24 +20,24 @@
   },
   "homepage": "https://github.com/hexlet-components/js-html-tags#readme",
   "dependencies": {
-    "babel-preset-env": "*",
-    "babel-preset-flow": "*",
-    "babel-preset-stage-0": "*",
-    "hexlet-pairs": "*",
-    "hexlet-pairs-data": "*"
+    "hexlet-pairs": "^1.0.8",
+    "hexlet-pairs-data": "^1.0.8"
   },
   "devDependencies": {
-    "babel-cli": "*",
-    "babel-core": "*",
-    "babel-eslint": "*",
-    "babel-jest": "^22.4.3",
-    "documentation": "^4.0.0",
-    "eslint": "*",
-    "eslint-config-airbnb": "*",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-jest": "^21.15.1",
-    "gulp": "*",
-    "jest": "*",
-    "jest-cli": "^22.4.3"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "documentation": "^9.1.1",
+    "eslint": "^5.14.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.3.0",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.93.0",
+    "jest": "^24.1.0",
+    "jest-cli": "^24.1.0"
   }
 }
