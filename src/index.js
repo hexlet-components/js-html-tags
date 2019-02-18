@@ -30,16 +30,16 @@ export const node = (tag, mix = data.l()) => cons(tag, mix);
 /**
  * Get node's name
  * @example
- * name(node('p', 'hello, world')); // p
+ * getName(node('p', 'hello, world')); // p
  */
-export const name = element => car(element);
+export const getName = element => car(element);
 
 /**
  * Get node's value
  * @example
- * value(node('p', 'hello, world')); // hello, world
+ * getValue(node('p', 'hello, world')); // hello, world
  */
-export const value = element => cdr(element);
+export const getValue = element => cdr(element);
 
 /**
  * Check if node is tag
@@ -47,7 +47,7 @@ export const value = element => cdr(element);
  * is('h3', node('h3', 'hexlet')); // true
  * is('h3', node('h6', 'hexlet')); // false
  */
-export const is = (tagName: string, element) => tagName === name(element);
+export const is = (tagName: string, element) => tagName === getName(element);
 
 /**
  * Check if node has children
@@ -72,7 +72,7 @@ export const children = element => cdr(element);
  * addChild(node, node('p', 'html tags'));
  */
 export const addChild = (element, child) =>
-  data.cons(name(element), data.cons(child, children(element)));
+  data.cons(getName(element), data.cons(child, children(element)));
 
 /**
  * Convert list of nodes to string
@@ -85,8 +85,8 @@ export const toString = (elements) => {
     return '';
   }
   const element = data.head(elements);
-  const tag = name(element);
-  const body = hasChildren(element) ? toString(children(element)) : value(element);
+  const tag = getName(element);
+  const body = hasChildren(element) ? toString(children(element)) : getValue(element);
   return `${toString(data.tail(elements))}<${tag}>${body}</${tag}>`;
 };
 
@@ -95,7 +95,7 @@ export const toString = (elements) => {
  * @example
  * map(element => {
  *   if (is('h2', element)) {
- *     return node('h3', value(element));
+ *     return node('h3', getValue(element));
  *   }
  *   return element;
  * }, dom);
