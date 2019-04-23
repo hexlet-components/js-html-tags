@@ -8,7 +8,7 @@ import * as data from 'hexlet-pairs-data';
  * @example
  * make(node('span', 'hello'), node('span', 'world'));
  */
-export const make = () => data.l();
+export const make = (...args) => data.reverse(data.l(...args));
 
 /**
  * Append node to a list of nodes
