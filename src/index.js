@@ -1,6 +1,11 @@
 // @flow
 
-import { isPair, car, cdr, cons } from 'hexlet-pairs';
+import {
+  isPair,
+  car,
+  cdr,
+  cons,
+} from 'hexlet-pairs';
 import * as data from 'hexlet-pairs-data';
 
 /**
@@ -8,7 +13,7 @@ import * as data from 'hexlet-pairs-data';
  * @example
  * make(node('span', 'hello'), node('span', 'world'));
  */
-export const make = () => data.l();
+export const make = (...args) => data.reverse(data.l(...args));
 
 /**
  * Append node to a list of nodes
@@ -71,8 +76,10 @@ export const children = element => cdr(element);
  * const node = node('div');
  * addChild(node, node('p', 'html tags'));
  */
-export const addChild = (element, child) =>
-  data.cons(getName(element), data.cons(child, children(element)));
+export const addChild = (element, child) => data.cons(
+  getName(element),
+  data.cons(child, children(element)),
+);
 
 /**
  * Convert list of nodes to string

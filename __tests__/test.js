@@ -25,6 +25,12 @@ describe('dom', () => {
     dom = append(dom3, node('h2', 'header2'));
   });
 
+  it('#make', () => {
+    const tags = make(node('p', 'text'), node('p', 'text2'));
+    const result = '<p>text</p><p>text2</p>';
+    expect(toString(tags)).toBe(result);
+  });
+
   it('#toString', () => {
     const p = node('p', 'paragraph');
     const ul = node('ul');
