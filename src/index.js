@@ -5,8 +5,8 @@ import {
   car,
   cdr,
   cons,
-} from 'hexlet-pairs';
-import * as data from 'hexlet-pairs-data';
+} from '@hexlet/pairs';
+import * as data from '@hexlet/pairs-data';
 
 /**
  * Make a list of nodes
