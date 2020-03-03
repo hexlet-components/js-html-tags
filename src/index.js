@@ -37,14 +37,14 @@ export const node = (tag, mix = data.l()) => cons(tag, mix);
  * @example
  * getName(node('p', 'hello, world')); // p
  */
-export const getName = element => car(element);
+export const getName = (element) => car(element);
 
 /**
  * Get node's value
  * @example
  * getValue(node('p', 'hello, world')); // hello, world
  */
-export const getValue = element => cdr(element);
+export const getValue = (element) => cdr(element);
 
 /**
  * Check if node is tag
@@ -60,7 +60,7 @@ export const is = (tagName, element) => tagName === getName(element);
  * hasChildren(node('h3', 'hexlet')); // false
  * hasChildren(node('div', l(node('p', 'wow')))); // true
  */
-export const hasChildren = element => isPair(cdr(element));
+export const hasChildren = (element) => isPair(cdr(element));
 
 /**
  * Get node's children
@@ -68,7 +68,7 @@ export const hasChildren = element => isPair(cdr(element));
  * const children = l(node('p', 'wow'), node('p', 'hey'));
  * children(node('div', children)); // [('p', 'wow'), ('p', 'hey')]
  */
-export const children = element => cdr(element);
+export const children = (element) => cdr(element);
 
 /**
  * Add child to node

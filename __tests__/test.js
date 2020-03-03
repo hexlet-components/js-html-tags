@@ -59,7 +59,7 @@ describe('dom', () => {
   });
 
   it('#filter', () => {
-    const processedDom = filter(element => is('h2', element), dom);
+    const processedDom = filter((element) => is('h2', element), dom);
 
     const result = '<h2>hello, world</h2><h2>header2</h2>';
     expect(toString(processedDom)).toBe(result);
