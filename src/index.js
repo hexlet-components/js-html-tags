@@ -1,4 +1,4 @@
-// @flow
+// @ts-check
 
 import {
   isPair,
@@ -13,7 +13,7 @@ import * as data from '@hexlet/pairs-data';
  * @example
  * make(node('span', 'hello'), node('span', 'world'));
  */
-export const make = (...args) => data.reverse(data.l(...args));
+export const make = (...elements) => data.reverse(data.l(...elements));
 
 /**
  * Append node to a list of nodes
@@ -37,14 +37,14 @@ export const node = (tag, mix = data.l()) => cons(tag, mix);
  * @example
  * getName(node('p', 'hello, world')); // p
  */
-export const getName = element => car(element);
+export const getName = (element) => car(element);
 
 /**
  * Get node's value
  * @example
  * getValue(node('p', 'hello, world')); // hello, world
  */
-export const getValue = element => cdr(element);
+export const getValue = (element) => cdr(element);
 
 /**
  * Check if node is tag
@@ -52,7 +52,7 @@ export const getValue = element => cdr(element);
  * is('h3', node('h3', 'hexlet')); // true
  * is('h3', node('h6', 'hexlet')); // false
  */
-export const is = (tagName: string, element) => tagName === getName(element);
+export const is = (tagName, element) => tagName === getName(element);
 
 /**
  * Check if node has children
@@ -60,7 +60,7 @@ export const is = (tagName: string, element) => tagName === getName(element);
  * hasChildren(node('h3', 'hexlet')); // false
  * hasChildren(node('div', l(node('p', 'wow')))); // true
  */
-export const hasChildren = element => isPair(cdr(element));
+export const hasChildren = (element) => isPair(cdr(element));
 
 /**
  * Get node's children
@@ -68,7 +68,7 @@ export const hasChildren = element => isPair(cdr(element));
  * const children = l(node('p', 'wow'), node('p', 'hey'));
  * children(node('div', children)); // [('p', 'wow'), ('p', 'hey')]
  */
-export const children = element => cdr(element);
+export const children = (element) => cdr(element);
 
 /**
  * Add child to node
@@ -107,18 +107,18 @@ export const toString = (elements) => {
  *   return element;
  * }, dom);
  */
-export const map = (func, elements) => data.map(func, elements);
+export const map = (callbackFn, elements) => data.map(callbackFn, elements);
 
 /**
  * Filter a list of nodes
  * @example
  * filter(element => is('h2', element), dom);
  */
-export const filter = (func, elements) => data.filter(func, elements);
+export const filter = (callbackFn, elements) => data.filter(callbackFn, elements);
 
 /**
  * Reduce a list of nodes
  * @example
  * reduce((element, acc) => acc + 1, 0, dom);
  */
-export const reduce = (func, init, elements) => data.reduce(func, init, elements);
+export const reduce = (callbackFn, init, elements) => data.reduce(callbackFn, init, elements);
