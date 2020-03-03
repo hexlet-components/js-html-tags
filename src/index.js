@@ -13,7 +13,7 @@ import * as data from '@hexlet/pairs-data';
  * @example
  * make(node('span', 'hello'), node('span', 'world'));
  */
-export const make = (...args) => data.reverse(data.l(...args));
+export const make = (...elements) => data.reverse(data.l(...elements));
 
 /**
  * Append node to a list of nodes
@@ -107,18 +107,18 @@ export const toString = (elements) => {
  *   return element;
  * }, dom);
  */
-export const map = (func, elements) => data.map(func, elements);
+export const map = (callbackFn, elements) => data.map(callbackFn, elements);
 
 /**
  * Filter a list of nodes
  * @example
  * filter(element => is('h2', element), dom);
  */
-export const filter = (func, elements) => data.filter(func, elements);
+export const filter = (callbackFn, elements) => data.filter(callbackFn, elements);
 
 /**
  * Reduce a list of nodes
  * @example
  * reduce((element, acc) => acc + 1, 0, dom);
  */
-export const reduce = (func, init, elements) => data.reduce(func, init, elements);
+export const reduce = (callbackFn, init, elements) => data.reduce(callbackFn, init, elements);
