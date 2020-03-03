@@ -1,4 +1,4 @@
-// @flow
+// @ts-check
 
 import {
   isPair,
@@ -52,7 +52,7 @@ export const getValue = element => cdr(element);
  * is('h3', node('h3', 'hexlet')); // true
  * is('h3', node('h6', 'hexlet')); // false
  */
-export const is = (tagName: string, element) => tagName === getName(element);
+export const is = (tagName, element) => tagName === getName(element);
 
 /**
  * Check if node has children
