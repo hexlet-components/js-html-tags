@@ -11,7 +11,7 @@ import {
   is,
   getValue,
   node,
-} from '../src';
+} from '../index.js';
 
 describe('dom', () => {
   let dom;

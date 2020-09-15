@@ -1,13 +1,15 @@
 {
   "name": "@hexlet/html-tags",
-  "version": "0.5.2",
+  "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "documentation": "documentation",
-    "test": "jest --colors",
-    "build": "babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build"
+    "test": "npx -n --experimental-vm-modules -n --no-warnings jest --colors"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -20,21 +22,16 @@
   },
   "homepage": "https://github.com/hexlet-components/js-html-tags#readme",
   "dependencies": {
-    "@hexlet/pairs": "^1.0.14",
-    "@hexlet/pairs-data": "^1.0.10"
+    "@hexlet/pairs": "^1.1.0",
+    "@hexlet/pairs-data": "^1.1.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.0.1",
-    "documentation": "^13.0.0",
-    "eslint": "^7.1.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.13.1",
-    "jest": "^26.0.1",
-    "jest-cli": "^26.0.1"
+    "documentation": "^13.0.2",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.1",
+    "jest": "^26.4.2",
+    "jest-cli": "^26.4.2"
   }
 }
