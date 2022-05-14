@@ -6,7 +6,7 @@ docs:
 	npm run documentation -- build index.js -f md > docs/README.md
 
 test:
-	npm test -s
+	npm test
 
 lint:
 	npx eslint .
