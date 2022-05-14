@@ -6,10 +6,7 @@
   "type": "module",
   "scripts": {
     "documentation": "documentation",
-    "test": "jest"
-  },
-  "jest": {
-    "transform": {}
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
   },
   "repository": {
     "type": "git",
