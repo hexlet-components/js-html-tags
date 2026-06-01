@@ -1,11 +1,6 @@
 // @ts-check
 
-import {
-  isPair,
-  car,
-  cdr,
-  cons,
-} from '@hexlet/pairs';
+import { car, cdr, cons, isPair } from '@hexlet/pairs';
 import * as data from '@hexlet/pairs-data';
 
 /**
@@ -76,10 +71,8 @@ export const children = (element) => cdr(element);
  * const node = node('div');
  * addChild(node, node('p', 'html tags'));
  */
-export const addChild = (element, child) => data.cons(
-  getName(element),
-  data.cons(child, children(element)),
-);
+export const addChild = (element, child) =>
+  data.cons(getName(element), data.cons(child, children(element)));
 
 /**
  * Convert list of nodes to string
@@ -93,7 +86,9 @@ export const toString = (elements) => {
   }
   const element = data.head(elements);
   const tag = getName(element);
-  const body = hasChildren(element) ? toString(children(element)) : getValue(element);
+  const body = hasChildren(element)
+    ? toString(children(element))
+    : getValue(element);
   return `${toString(data.tail(elements))}<${tag}>${body}</${tag}>`;
 };
 
@@ -114,11 +109,13 @@ export const map = (callbackFn, elements) => data.map(callbackFn, elements);
  * @example
  * filter(element => is('h2', element), dom);
  */
-export const filter = (callbackFn, elements) => data.filter(callbackFn, elements);
+export const filter = (callbackFn, elements) =>
+  data.filter(callbackFn, elements);
 
 /**
  * Reduce a list of nodes
  * @example
  * reduce((element, acc) => acc + 1, 0, dom);
  */
-export const reduce = (callbackFn, init, elements) => data.reduce(callbackFn, init, elements);
+export const reduce = (callbackFn, init, elements) =>
+  data.reduce(callbackFn, init, elements);
