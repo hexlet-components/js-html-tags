@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/hexlet-components/js-html-tags#readme",
   "dependencies": {
-    "@hexlet/pairs": "^1.1.1",
-    "@hexlet/pairs-data": "^1.1.1"
+    "@hexlet/pairs": "^2.0.1",
+    "@hexlet/pairs-data": "^2.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
