@@ -2,6 +2,14 @@
 
 [![github action status](https://github.com/hexlet-components/js-html-tags/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-components/js-html-tags/actions)
 
+## Зачем это нужно
+
+Сборка HTML из вложенных массивов: дерево тегов описывается данными, а строка
+получается из него функцией.
+
+Нужна курсам, где показывают разделение представления и данных, и почему
+собирать разметку конкатенацией строк плохо кончается.
+
 ## Install
 
 ```sh
