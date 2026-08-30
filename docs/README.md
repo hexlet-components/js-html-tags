@@ -6,45 +6,45 @@
 
 ### Table of Contents
 
--   [make][1]
-    -   [Parameters][2]
-    -   [Examples][3]
--   [append][4]
-    -   [Parameters][5]
-    -   [Examples][6]
--   [node][7]
-    -   [Parameters][8]
-    -   [Examples][9]
--   [getName][10]
-    -   [Parameters][11]
-    -   [Examples][12]
--   [getValue][13]
-    -   [Parameters][14]
-    -   [Examples][15]
--   [is][16]
-    -   [Parameters][17]
-    -   [Examples][18]
--   [hasChildren][19]
-    -   [Parameters][20]
-    -   [Examples][21]
--   [children][22]
-    -   [Parameters][23]
-    -   [Examples][24]
--   [addChild][25]
-    -   [Parameters][26]
-    -   [Examples][27]
--   [toString][28]
-    -   [Parameters][29]
-    -   [Examples][30]
--   [map][31]
-    -   [Parameters][32]
-    -   [Examples][33]
--   [filter][34]
-    -   [Parameters][35]
-    -   [Examples][36]
--   [reduce][37]
-    -   [Parameters][38]
-    -   [Examples][39]
+- [make][1]
+    - [Parameters][2]
+    - [Examples][3]
+- [append][4]
+    - [Parameters][5]
+    - [Examples][6]
+- [node][7]
+    - [Parameters][8]
+    - [Examples][9]
+- [getName][10]
+    - [Parameters][11]
+    - [Examples][12]
+- [getValue][13]
+    - [Parameters][14]
+    - [Examples][15]
+- [is][16]
+    - [Parameters][17]
+    - [Examples][18]
+- [hasChildren][19]
+    - [Parameters][20]
+    - [Examples][21]
+- [children][22]
+    - [Parameters][23]
+    - [Examples][24]
+- [addChild][25]
+    - [Parameters][26]
+    - [Examples][27]
+- [toString][28]
+    - [Parameters][29]
+    - [Examples][30]
+- [map][31]
+    - [Parameters][32]
+    - [Examples][33]
+- [filter][34]
+    - [Parameters][35]
+    - [Examples][36]
+- [reduce][37]
+    - [Parameters][38]
+    - [Examples][39]
 
 ## make
 
@@ -52,7 +52,7 @@ Make a list of nodes
 
 ### Parameters
 
--   `elements` **...any** 
+- `elements` **...any**
 
 ### Examples
 
@@ -66,8 +66,8 @@ Append node to a list of nodes
 
 ### Parameters
 
--   `dom`  
--   `element`  
+- `dom`  
+- `element`  
 
 ### Examples
 
@@ -82,8 +82,8 @@ Make a node
 
 ### Parameters
 
--   `tag`  
--   `mix`   (optional, default `data.l()`)
+- `tag`  
+- `mix` (optional, default `data.l()`)
 
 ### Examples
 
@@ -98,7 +98,7 @@ Get node's name
 
 ### Parameters
 
--   `element`  
+- `element`  
 
 ### Examples
 
@@ -112,7 +112,7 @@ Get node's value
 
 ### Parameters
 
--   `element`  
+- `element`  
 
 ### Examples
 
@@ -126,8 +126,8 @@ Check if node is tag
 
 ### Parameters
 
--   `tagName`  
--   `element`  
+- `tagName`  
+- `element`  
 
 ### Examples
 
@@ -142,7 +142,7 @@ Check if node has children
 
 ### Parameters
 
--   `element`  
+- `element`  
 
 ### Examples
 
@@ -157,7 +157,7 @@ Get node's children
 
 ### Parameters
 
--   `element`  
+- `element`  
 
 ### Examples
 
@@ -172,8 +172,8 @@ Add child to node
 
 ### Parameters
 
--   `element`  
--   `child`  
+- `element`  
+- `child`  
 
 ### Examples
 
@@ -188,7 +188,7 @@ Convert list of nodes to string
 
 ### Parameters
 
--   `elements`  
+- `elements`  
 
 ### Examples
 
@@ -203,8 +203,8 @@ Map a list of nodes
 
 ### Parameters
 
--   `callbackFn`  
--   `elements`  
+- `callbackFn`  
+- `elements`  
 
 ### Examples
 
@@ -223,8 +223,8 @@ Filter a list of nodes
 
 ### Parameters
 
--   `callbackFn`  
--   `elements`  
+- `callbackFn`  
+- `elements`  
 
 ### Examples
 
@@ -238,9 +238,9 @@ Reduce a list of nodes
 
 ### Parameters
 
--   `callbackFn`  
--   `init`  
--   `elements`  
+- `callbackFn`  
+- `init`  
+- `elements`  
 
 ### Examples
 
